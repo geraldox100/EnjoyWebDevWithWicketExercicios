@@ -1,0 +1,15 @@
+tr.even {
+	background-color: GreenYellow
+}
+
+tr.odd {
+	background-color: RoyalBlue
+}
+
+tr.navigation {
+	background-color: Yellow
+}
+
+tr.headers {
+	background-color: Pink
+}

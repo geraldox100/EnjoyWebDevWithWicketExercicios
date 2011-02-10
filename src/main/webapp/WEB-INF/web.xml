@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+    <filter-name>OpenEntityManagerFilter</filter-name>
+    <filter-class>
+			org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+  </filter>
+  <filter>
+    <filter-name>WicketFilter</filter-name>
+    <filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+    <init-param>
+      <param-name>applicationClassName</param-name>
+      <param-value>com.foo.MyApp</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>WicketFilter</filter-name>
+    <url-pattern>/app/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>OpenEntityManagerFilter</filter-name>
+    <url-pattern>/app/*</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:/beans.xml</param-value>
+  </context-param>
+</web-app>

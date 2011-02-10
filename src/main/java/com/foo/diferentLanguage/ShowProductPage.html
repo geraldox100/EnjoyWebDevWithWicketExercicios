@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form wicket:id="setLocale">
+			<select wicket:id="selectedLocal"></select>
+			<input type="submit" value="Change" wicket:message="value:change"></input>
+		</form>
+		<wicket:link>
+			<img src="logo.png" />
+		</wicket:link>
+		<table>
+			<tr>
+				<td><wicket:message key="productId">Product ID</wicket:message></td>
+				<td wicket:id="id">p1</td>
+			</tr>
+			<tr>
+				<td><wicket:message key="productName">Product Name</wicket:message></td>
+				<td wicket:id="name">Pen</td>
+			</tr>
+		</table>
+		<span wicket:id="homeLink"></span>
+
+		<form wicket:id="f">
+			<input type="submit" value="Home Page" wicket:message="value:homePage">
+		</form>
+	</body>
+</html>

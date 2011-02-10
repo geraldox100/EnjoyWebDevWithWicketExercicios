@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="current-page-unit-test">
+	<test name="test" annotations="JDK">
+		<classes>
+			<class name="com.ttdev.wicketpagetest.WebPageTestContext"></class>
+			<class name="com.foo.test.FormPageTestNG"></class>
+		</classes>
+	</test>
+</suite>
